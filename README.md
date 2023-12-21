@@ -16,9 +16,3 @@
 3) 修改`send_recv.h`中`file_sendPkt`为待发送报文的缓存地址
 4) 修改`send_recv.h`中`file_recvPkt`为已接收报文的缓存地址
 
-#define DST_MAC_0 0x00
-#define DST_MAC_1 0xe0
-#define DST_MAC_2 0x4c
-#define DST_MAC_3 0x3c
-#define DST_MAC_4 0x03
-#define DST_MAC_5 0x78
