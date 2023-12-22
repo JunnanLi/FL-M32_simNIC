@@ -27,10 +27,10 @@ void main(int argc, char *argv[])
 	   	// printf("%08x\n", unvalidLen);
 	   	len = ((unvalidLen & 0xff)<<4) - ((unvalidLen&0xf00)>>8) - 12;
 	   	printf("payload's len: %d\n", len);
-	   	// len = (len<50)? 50:len;
+	   	int len_payload = (len<46)? 46:len-2;
 
-		// lib_net = libnet_init(LIBNET_LINK_ADV, NAME_NETIF, err_buf);
-		lib_net = libnet_init(LIBNET_LINK_ADV, "wlp0s20f3", err_buf);
+		lib_net = libnet_init(LIBNET_LINK_ADV, NAME_NETIF, err_buf);
+		// lib_net = libnet_init(LIBNET_LINK_ADV, "wlp0s20f3", err_buf);
 		
 		if(NULL == lib_net)  {  
 		    perror("libnet_init");  
@@ -60,7 +60,7 @@ void main(int argc, char *argv[])
 			(u_int8_t *)src_mac,  
 			ethType,
 			(u8 *) &payload[2],	// payload 
-			len,  				// payload length
+			len_payload,		// payload length
 			lib_net,  
 			0  
 		);  

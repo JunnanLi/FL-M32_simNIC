@@ -24,8 +24,8 @@ typedef unsigned int u32;
 #define DST_MAC_4 0x01
 #define DST_MAC_5 0x02
 
-//#define NAME_NETIF "enx00e04d6da7b3"
-#define NAME_NETIF "wlp0s20f3"
+#define NAME_NETIF "enx00e04d6da7b3"
+// #define NAME_NETIF "wlp0s20f3"
 
 char file_sendPkt[50] = "../fl-m32-4Cores-w-iCache/pktOut.txt";
 // char file_sendPkt[20] = "pktIn.txt";
